@@ -8,18 +8,22 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="~/CSS/StyleSheet1.css" rel="stylesheet" type="text/css" />
+     <script type="text/javascript" src="//maps.googleapis.com//maps/api/js?key="AIzaSyA_gxvkNj_UTPy4nrmNRqUesABWLa_l7HE&sensor="true"></script>
+    
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="TopContent" runat="server">
-                <hgroup>
+        <div id="TopContent">
+            <hgroup>
                     <h1>Essential Oil</h1>
                     <h2>By Young Living</h2>
                 </hgroup>
-                
 
-                <nav id="menu">
+                            <nav id="menu">
                     <ul>
                         <li><a href="~/default.aspx" runat="server">Home</a></li>
                         <li><a href="~/AboutUs.aspx" runat="server">About Us</a></li>
@@ -27,8 +31,10 @@
                         <li><a href="~/SignIn.aspx" runat="server">Members</a></li>
                     </ul>
                 </nav>
+</div>
+            <asp:ContentPlaceHolder ID="Top" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        
 
         <div id="main">
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -42,6 +48,12 @@
             </asp:ContentPlaceHolder>
         </div>
 
-    </form>
-</body>
+
+
+ </form> 
+    
+    <asp:ContentPlaceHolder ID="MapContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>      
 </html>

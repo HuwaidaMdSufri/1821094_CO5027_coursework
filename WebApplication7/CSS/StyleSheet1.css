@@ -71,6 +71,26 @@ li a:hover{
 .auto-style4 {
     font-size: xx-large;
     text-align: center;
-    background-color: #99CC00;
+    background-color: #ffffff;
 }
+
+.grid__item {
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 425px;
+    ;
+}
+
+html, body {
+    height: 500px;
+    margin: 0;
+    padding: 0;
+
+}
+
+
 
