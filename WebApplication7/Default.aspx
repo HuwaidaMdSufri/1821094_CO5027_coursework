@@ -1,66 +1,37 @@
-﻿<%@ Page Title="HomePage" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication7.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication7.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Top" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
+
+    <asp:Panel ID="Panel1" runat="server">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="Repeater1_ItemCommand">
+        <HeaderTemplate><ul></HeaderTemplate>
+        <ItemTemplate>
+            <ul class="repeater">
+                <li>
+                    
+                                     
+                    <p><asp:Image ID="img" runat="server" Width="200" Height="200" ImageUrl='<%#"~/Images/" + Eval("ItemNo")+ ".jpg" %>' AlternateText='<%#Eval("ProductName")%>' ToolTip='<%#Eval("ProductName") %>' /> </p>
+                    <p> &nbsp </p>
+                    <p><a href="<%#Eval("ProductID","Product.aspx?Id={0}") %>"><%#Eval("ProductName") %></a></p>
+                    <p><%#Eval("PShortName") %></p>
+                    <p><b>Available Quantity:</b><%#Eval("Quantity") %></p>
+                    <p><b>Type:</b><%#Eval("PType") %></p>
+                </li>
+            </ul>
+
+        </ItemTemplate>
+        <FooterTemplate></ul></FooterTemplate>
+        </asp:Repeater>
+
+        <br />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IdentityConnectionString %>" SelectCommand="SELECT * FROM [tblNewProduct] WHERE (Quantity &gt; 0)"></asp:SqlDataSource>
+    </asp:Panel>
+
 </asp:Content>
-<asp:Content ID="Product" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="product list">
-    <h1> Product Items</h1> </div> 
-
-    <div class="grid-uniform">
-  <div class="grid__item large--one-third">
-    <div>
-              <a href="ProductDetail.aspx">
-      <img src="images/YL/003.jpg"/><img src="~/images/YL/003.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-  <div class="grid__item large--one-third">
-    <div>
-              <a href="ProductDetail.aspx">
-      <img src="images/YL/002.jpg" /><img src="~/images/YL/002.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-  <div class="grid__item large--one-third">
-    <div>
-        <a href="ProductDetail.aspx">
-      <img src="images/YL/001.jpg" /><img src="~/images/YL/001.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-  <div class="grid__item large--one-third">
-    <div>
-              <a href="ProductDetail.aspx">
-      <img src="images/YL/004.jpg" /><img src="~/images/YL/004.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-  <div class="grid__item large--one-third">
-    <div>
-              <a href="ProductDetail.aspx">
-      <img src="images/YL/005.jpg" /><img src="~/images/YL/005.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-  <div class="grid__item large--one-third">
-    <div>
-              <a href="ProductDetail.aspx">
-      <img src="images/YL/006.jpg" /><img src="~/images/YL/006.jpg" style="height: 199px; width: 197px"></a>&nbsp;
-        <p style="font-size: larger"><strong>Detail:</strong></p>
-        <p style="font-size: larger"><strong>Price:$32.90</strong></p>
-    </div>
-
-  </div>
-</div>
+<asp:Content ID="Content3" ContentPlaceHolderID="map" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="leftContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

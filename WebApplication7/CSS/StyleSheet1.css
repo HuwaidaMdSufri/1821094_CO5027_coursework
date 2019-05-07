@@ -2,41 +2,8 @@
     background-color:antiquewhite;
 }
 
-#menu{
-    background-color: #F0FFF0;
-    padding:5px;
-}
 
-ul{
-    list-style-type:none;
-}
 
-li a { 
-    color:#000000;
-    font-size: 30px;
-    column-width:5px;
-}
-li{
-    display:inline;
-    padding-left:2px;
-    column-width:20px;
-}
-
-a{
-    text-decoration:none;
-    margin-left:20px;
-}
-
-li a:hover{
-    background-color:#FFFACD;
-    color:#E0FFFF;
-    padding:1px;
-}
-
-#main {
-    border:double;
-    border-color:#FAFAD2;
-} 
 
 #footer{
     background-color: #F5DEB3;
@@ -45,34 +12,9 @@ li a:hover{
     font-size:20px;
 }
 
-#repeater
-
-.repeater ul li {
-    height: 500px;
-    margin-top: 40px;
-}
-
-.repeater li {
-    display: inline-block;
-    width: 30%;
-}
 
 
-.repeater ul li a {
-    text-decoration: none;
-    color: purple;
-    font-size: 50px;
-}
 
-    .repeater ul li a p {
-        text-align: center;
-    }
-
-.auto-style4 {
-    font-size: xx-large;
-    text-align: center;
-    background-color: #ffffff;
-}
 
 .grid__item {
     border: 1px solid black;

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.ModelBinding;
 
 namespace WebApplication7
 {
@@ -15,12 +14,9 @@ namespace WebApplication7
 
         }
 
-        protected void ImageButton1_Click(object sender,ImageClickEventArgs e )
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            Response.Redirect("ProductDetail.aspx");
+
         }
-
-        
-
     }
 }

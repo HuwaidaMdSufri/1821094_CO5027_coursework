@@ -17,6 +17,45 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <style>
+            #menu{
+    background-color: #F0FFF0;
+    padding:10px;
+}
+
+#menu ul{
+    list-style-type:none;
+}
+
+#menu li a { 
+    color:#000000;
+    font-size: 30px;
+    column-width:5px;
+}
+#menu li{
+    display:inline;
+    padding-left:2px;
+    column-width:20px;
+}
+
+#menu a{
+    text-decoration:none;
+    margin-left:20px;
+}
+
+#menu li a:hover{
+    background-color:#FFFACD;
+    color:#E0FFFF;
+    padding:1px;
+}
+
+        #main {
+            border: double;
+            border-color: #FAFAD2;
+        }
+
+        </style>
+
         <div id="TopContent">
             <hgroup>
                     <h1>Essential Oil</h1>

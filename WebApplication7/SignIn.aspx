@@ -1,27 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeFile="SignIn.aspx.cs" Inherits="WebApplication7.SignIn" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="WebApplication7.SignIn" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Top" runat="server">
+    <h2>Sign In </h2>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Panel ID="register" runat="server">
     <h2>Register</h2>
-    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="register"
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="register"
             CssClass="errorMessages" />
         <div>
-            <asp:Label ID="lblUserName" runat="server" Text="UserName" AssociatedControlID="txtUserName"></asp:Label>
-            <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ControlToValidate="txtUserName"
+            <asp:Label ID="lblRegUserName" runat="server" Text="UserName" AssociatedControlID="txtRegUserName"></asp:Label>
+            <asp:TextBox ID="txtRegUserName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ControlToValidate="txtRegUserName"
                 ErrorMessage="Please enter a user name" ValidationGroup="register">*</asp:RequiredFieldValidator>
         </div>
         <div>
-            <asp:Label ID="lblPassword" runat="server" Text="Password" AssociatedControlID="txtPassword"></asp:Label>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword"
+            <asp:Label ID="lblRegPassword" runat="server" Text="Password" AssociatedControlID="txtRegPassword"></asp:Label>
+            <asp:TextBox ID="txtRegPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRegPassword"
                 ErrorMessage="Please enter a password" ValidationGroup="register">*</asp:RequiredFieldValidator>
         </div>
         <div>
-            <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" AssociatedControlID="txtPassword"></asp:Label>
-            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox><asp:CompareValidator
-                ErrorMessage="Please check your passwords match" ControlToValidate="txtConfirmPassword"
-                ControlToCompare="txtPassword" runat="server" ValidationGroup="register" ID="cvPasswords">*</asp:CompareValidator>
+            <asp:Label ID="lblRegConfirmPassword" runat="server" Text="Confirm Password" AssociatedControlID="txtRegPassword"></asp:Label>
+            <asp:TextBox ID="txtRegConfirmPassword" runat="server" TextMode="Password"></asp:TextBox><asp:CompareValidator
+                ErrorMessage="Please check your passwords match" ControlToValidate="txtRegConfirmPassword"
+                ControlToCompare="txtRegPassword" runat="server" ValidationGroup="register" ID="cvPasswords">*</asp:CompareValidator>
         </div>
         <div>
             <asp:Label ID="lblDOB" runat="server" Text="DOB" AssociatedControlID="txtDOB"></asp:Label>
@@ -34,12 +38,17 @@
         </div>
         <div>
             <asp:Button ID="btnRegister" runat="server" Text="Register" ValidationGroup="register" OnClick="btnRegister_Click" />
-        </div>
+            <br />
+            </div>
+            <asp:Literal ID="litRegisterError" runat="server"></asp:Literal>
+</asp:Panel>
+            
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>LogIn</h2>
-    <asp:ValidationSummary runat="server" ValidationGroup="login" CssClass="errorMessages" />
+      
+
+    <asp:Panel ID="loginuser" runat="server">
+        <h2>Log In</h2>
+     <asp:ValidationSummary runat="server" ValidationGroup="login" CssClass="errorMessages" />
             <div>
                 <asp:Label ID="lblLogInUserName" runat="server" Text="UserName" AssociatedControlID="txtLogInUser"></asp:Label>
                 <asp:TextBox ID="txtLogInUser" runat="server"></asp:TextBox><asp:RequiredFieldValidator
@@ -51,11 +60,20 @@
                     ErrorMessage="Please enter a password" ControlToValidate="txtLogInPassword" ValidationGroup="login" runat="server" >*</asp:RequiredFieldValidator>
             </div>
             <div>
-                <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="login" />
-            </div>
- 
+                <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="login" OnClick="btnLogin_Click" />
+                <br />
+                </div>
+                <asp:Literal ID="LitLoginError" runat="server"></asp:Literal>
+    </asp:Panel>
+
+
+           
+            
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+        
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="MapContent" runat="server">
 </asp:Content>

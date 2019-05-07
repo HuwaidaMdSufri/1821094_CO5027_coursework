@@ -8,7 +8,7 @@ using System.Net.Mail;
 
 namespace WebApplication7
 {
-    public partial class Contact : System.Web.UI.Page
+    public partial class Contact2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,8 +46,8 @@ namespace WebApplication7
             MailMessage msg = new MailMessage(senderEmail, recipientEmail);
 
             //set the subject of the message, and set the body using the text from a text box
-            msg.Subject = "txtSubject.Text";
-            msg.Body = "From:" + txtEmail.Text + "\n" + "Subject:" + txtSubject.Text + "\n" + "Message:" + txtBody.Text;
+            msg.Subject = txtSubject.Text;
+            msg.Body = "Sender From:" + txtEmail.Text + "\n" + "Subject:" + txtSubject.Text + "\n" + "Message:" + txtBody.Text;
 
             //at this stage the body of the email only contains what the user has typed in the message box
             //there's nothing that collects their name and email address (which are required to reply to them)

@@ -1,14 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebApplication7.Contact" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Contact2.aspx.cs" Inherits="WebApplication7.Contact2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Top" runat="server">
-
-    <h2>this page should appear in wbpage</h2>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server"> 
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
+    
+    
     <h2>Contact Us Form</h2>
-    <asp:panel runat="server" ID="pnlCompose">
+    <asp:panel ID="pnlCompose" runat="server" >
         <asp:validationsummary runat="server" CssClass="errorMessages">
         </asp:validationsummary>
         <div>
@@ -88,14 +85,12 @@
     <p>Your message has been sent</p>
     </asp:Panel>
 
-
+    
+    
 
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Geolocation</h2>
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="MapContent" runat="server">
-    <h2>Map</h2>
+<asp:Content ID="Content3" ContentPlaceHolderID="map" runat="server">
+        <h2>Geolocation</h2>
      <div id="map"></div>
     <script>
         function initMap() {
@@ -112,5 +107,9 @@
         </script>
     
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBHLescsTdhmVRrGoQVTbQlvrgUHCmDzY&callback=initMap"
-  type="text/javascript"></script>    
+  type="text/javascript"></script>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="leftContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

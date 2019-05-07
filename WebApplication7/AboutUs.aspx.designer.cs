@@ -11,7 +11,7 @@ namespace WebApplication7
 {
 
 
-    public partial class AboutUs
+    public partial class Aboutus
     {
     }
 }

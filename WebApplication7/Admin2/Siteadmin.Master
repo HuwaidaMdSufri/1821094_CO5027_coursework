@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Siteadmin.master.cs" Inherits="WebApplication7.Admin2.Siteadmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Young Living</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/CSS/StyleSheet1.css" rel="stylesheet" type="text/css" />
+    
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="nav-menu">
+            <hgroup>
+            <h1>Admin Page</h1>
+            <h2>Essential Oil By Young Living</h2>
+            </hgroup>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="~/Admin2/Default.aspx" runat="server">Activity Log</a></li>
+                    <li><a href="~/Admin2/Insert.aspx" runat="server">Add Product</a></li>
+                    <li><a href="~/Admin2/Insert.aspx" runat="server">Edit Product</a></li>
+                    <li><a href="~/Admin2/ProductList.aspx" runat="server">Product List</a></li>
+                    <li><a href="~/Admin2/Upload.aspx" runat="server">Upload Image</a></li>
+                    <li><a href="~/Admin2/Logout.aspx" runat="server">Log out</a></li>
+                    <li><a href="~/Default.aspx" runat="server">ome Page</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <div id ="mainContent">
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id ="Left-side-content">
+        <asp:ContentPlaceHolder ID="leftContent" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="extra">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+</form>
+             <div id="footer">
+            <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> | <a href="http://jigsaw.w3.org/css.validator/check/referer">Validate CSS</a> | <a href="Admin/">Admin</a>
+            <p> (C) 2019 Young Living Essential Oil.  </p>
+        </div>   
+</body>
+    
+        
+
+
+
+</html>
