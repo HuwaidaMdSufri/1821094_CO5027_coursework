@@ -7,72 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication7.Master_Pages {
+namespace WebApplication7 {
     
     
-    public partial class Public {
+    public partial class Loginadmin {
         
         /// <summary>
-        /// head control.
+        /// PnlLoginadmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Panel PnlLoginadmin;
         
         /// <summary>
-        /// form1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// MainContent control.
+        /// txtloginadmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.TextBox txtloginadmin;
         
         /// <summary>
-        /// MapContent control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MapContent;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// ContentPlaceHolder3 control.
+        /// txtloginadminpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::System.Web.UI.WebControls.TextBox txtloginadminpassword;
         
         /// <summary>
-        /// ContentPlaceHolder4 control.
+        /// btnlogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder4;
+        protected global::System.Web.UI.WebControls.Button btnlogin;
         
         /// <summary>
-        /// ContentPlaceHolder5 control.
+        /// LitLoginError1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder5;
+        protected global::System.Web.UI.WebControls.Literal LitLoginError1;
     }
 }

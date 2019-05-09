@@ -61,7 +61,7 @@ namespace WebApplication7
             {
                 //todo: log user in/ instruct user to log in
                 LogInEmail(userManager, user);
-                Page.Response.Redirect("admin/Default.aspx");
+                Page.Response.Redirect("Admin2/Default.aspx");
             }
             else
             {

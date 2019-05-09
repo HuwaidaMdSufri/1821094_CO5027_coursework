@@ -29,7 +29,7 @@
                     <li><a href="~/Admin2/ProductList.aspx" runat="server">Product List</a></li>
                     <li><a href="~/Admin2/Upload.aspx" runat="server">Upload Image</a></li>
                     <li><a href="~/Admin2/Logout.aspx" runat="server">Log out</a></li>
-                    <li><a href="~/Default.aspx" runat="server">ome Page</a></li>
+                    <li><a href="~/Default.aspx" runat="server">Home Page</a></li>
                 </ul>
             </nav>
 

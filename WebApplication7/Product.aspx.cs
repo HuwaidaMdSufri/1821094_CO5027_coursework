@@ -14,9 +14,16 @@ namespace WebApplication7
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+
+        protected void addcartbtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Cart/Cart.aspx");
+        }
+
+        protected void homebtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
